@@ -6,6 +6,8 @@ const userRouter = require("./routes/userRouter");
 
 const app = express();
 
+console.log(process.env.MONGODB_URL);
+
 //Connection to MONGODB
 mongoose
   .connect(process.env.MONGODB_URL, {
@@ -13,7 +15,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("Connexion à MongoDB réussie !"))
-  .catch(() => console.log("Connexion à MongoDB échouée !"));
+  .catch((error) => console.log(error));
 
 app.use(express.json());
 
