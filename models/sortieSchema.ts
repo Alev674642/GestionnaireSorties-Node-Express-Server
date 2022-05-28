@@ -1,6 +1,20 @@
 const mongoose = require("mongoose");
 
-const sortieSchema = mongoose.Schema({
+export interface ISortie {
+  name: string;
+  description: string;
+  imageUrl: string;
+  userId: string;
+  userPseudo: string;
+  price: number;
+  date: Date;
+  lieu: string;
+  lieu2: string;
+  categorie: string;
+  signalee: Boolean;
+}
+
+const sortieSchema : ISortie = mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   imageUrl: { type: String, required: true },

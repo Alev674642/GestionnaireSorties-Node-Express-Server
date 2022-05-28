@@ -1,6 +1,14 @@
 const mongoose = require("mongoose");
 
-const articleSchema = mongoose.Schema({
+export interface Iarticle {
+  name: string;
+  description: string;
+  imageUrl: string;
+  userId: string;
+  price: string;
+}
+
+const articleSchema : Iarticle = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   imageUrl: { type: String, required: true },

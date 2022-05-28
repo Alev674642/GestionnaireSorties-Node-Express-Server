@@ -9,3 +9,4 @@ server.listen(process.env.PORT || 5000);
 console.log(
   "Server started and listenning on port " + (process.env.PORT || 5000)
 );
+export {};
