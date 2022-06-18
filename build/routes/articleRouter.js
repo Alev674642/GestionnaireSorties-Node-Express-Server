@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //const express = require("express");
 const express = require("express");
 const articleRouter = express.Router();
-const Article = require("../models/article");
 const articleController = require("../controllers/articleController");
 //POST CREATION ARTICLE
 articleRouter.post("/", articleController.createArticle);

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const sortieRouter = express.Router();
-const SortieSchema = require("../models/sortieSchema");
 const sortieController = require("../controllers/sortieController");
 const auth = require("../middleware/auth");
 //POST CREATION evenement

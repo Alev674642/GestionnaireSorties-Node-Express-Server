@@ -1,6 +1,5 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
-const articleRouter = require("./routes/articleRouter");
 const sortieRouter = require("./routes/sortieRouter");
 const userRouter = require("./routes/userRouter");
 import {Request, Response, NextFunction} from "express"
@@ -34,7 +33,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-app.use("/api/article", articleRouter);
 app.use("/api/sortie", sortieRouter);
 app.use("/api/auth", userRouter);
 

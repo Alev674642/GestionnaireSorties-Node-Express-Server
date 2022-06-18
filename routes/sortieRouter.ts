@@ -1,7 +1,6 @@
 
 import * as express from 'express';
 const sortieRouter = express.Router();
-const SortieSchema = require("../models/sortieSchema");
 const sortieController = require("../controllers/sortieController");
 const auth = require("../middleware/auth");
 
